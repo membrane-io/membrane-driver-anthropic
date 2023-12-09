@@ -68,6 +68,12 @@
               }
             ]
           }
+        ],
+        "fields": [
+          {
+            "name": "status",
+            "type": "String"
+          }
         ]
       }
     ]

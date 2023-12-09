@@ -3,6 +3,14 @@
 // `state` is an object that persists across program updates. Store data here.
 import { state } from "membrane";
 
+export function status() {
+  if (!state.apiKey) {
+    return "Please [get an Anthropic API key](https://console.anthropic.com/account/keys) and [configure](:configure) it.";
+  } else {
+    return `Ready`;
+  }
+}
+
 export async function configure({ apiKey, defaults }) {
   state.apiKey = apiKey ?? state.apiKey;
   state.defaults = defaults ?? state.defaults;
